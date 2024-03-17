@@ -8,6 +8,7 @@ import { BooksActions, BooksApiActions } from './state/books.actions';
 import { GoogleBooksService } from './book-list/books.service';
 import { Store } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     MyCounterComponent,
     BookListComponent,
-    BookCollectionComponent
+    BookCollectionComponent,
+    MoviesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
