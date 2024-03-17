@@ -10,6 +10,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideEffects } from '@ngrx/effects';
 import { MoviesEffects } from './state/movies.effects';
 import { MoviesReducer } from './state/movies.reducer';
+import { UserActivityEffects } from './state/user-activity.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,7 +21,7 @@ export const appConfig: ApplicationConfig = {
       collection: collectionReducer,
       movies: MoviesReducer
     }),
-    provideEffects(MoviesEffects),
+    provideEffects(MoviesEffects, UserActivityEffects),
     provideHttpClient()
   ]
 };
